@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<title>Library Assistant Login</title>
+
+ <style>
+ body {
+    background: url("https://s3.wp.wsu.edu/uploads/sites/1878/2016/11/Aerial-view-of-Pullman-campus-792x527.jpg") no-repeat;
+    background-size: 1920px 1080px;
+
+}
+#welcome{
+    font-size: 38px;
+    font-weight: 520;
+    font-style: italic;
+    color: white;
+
+       position:absolute;
+       top:25%;
+       right:25%;
+       margin-right: 70px;
+       margin-top: -100px;
+
+}
+
+#login {
+    width:396px;
+    height:480px;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left: -38px;
+    margin-top: -240px;
+
+    background:#fff;
+    border: 4px;
+    box-shadow:0px 0px 5px #999;
+    border-radius:5px;
+
+    text-align: center;
+}
+.text_field{
+    width: 330px;
+    height: 28px;
+    border: 0;
+    border-bottom:2px solid #eaeaea;
+
+    text-indent: 50px;
+}
+#username{
+    background: url("https://cdn0.iconfinder.com/data/icons/user-collection-4/512/user-512.png") no-repeat 5px center;
+    background-size: 27px 27px;
+}
+
+#password{
+    background: url("https://www.davidtan.org/wp-content/uploads/2008/09/protect-password-security-encrypted-file-logo-icon.jpeg") no-repeat 5px center;
+    background-size: 25px 25px;
+}
+ div{margin:30px}
+#btn_register{
+    font-size: 24px;
+    font-family: "Times New Roman";
+    color: black;
+    background: url("https://pngimage.net/wp-content/uploads/2018/06/yellow-bars-png.png");
+
+    width: 330px;
+    line-height: 55px;
+    text-align: center;
+
+    border: 0;
+}
+#btn_login{
+    font-size: 24px;
+    font-family: "Times New Roman";
+    color: black;
+    background: url("https://pngimage.net/wp-content/uploads/2018/06/yellow-bars-png.png");
+
+    width: 330px;
+    line-height: 55px;
+    text-align: center;
+
+    border: 0;
+}
+
+
+ </style>
+    </head>
+
+<body>
+    <div id="welcome">
+        Welcome to Library Asistant!
+    </div>
+<div id="login">
+<h2>Login</h2>
+
+<form method="POST">
+    <div id="div_username"><input type="text" id="username" name="username" class="text_field" placeholder="Please enter username" required><br></div>
+
+    <div id="div_password"><input type="password" id="password" name="password" class="text_field" placeholder="Please enter password" required><br></div>
+
+    <div id="div_btn_login"><input type="submit" id="btn_login" formaction="/login" value="Login"></div>
+
+    <div id="div_btn_register"><input type="submit" id="btn_register"formaction="/register" value="Register"></div>
+</form>
+{% if message %}
+<script>alert("{{ message }}");</script>
+{% endif %}
+    </div>
+</body>
+</html>
