@@ -4,7 +4,29 @@
     <meta charset="UTF-8">
 <title>Librarian Control Panel</title>
 <style>
+	body {
+	    background: url("https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat;
+	    background-size: 1920px 1080px;
+	
+	}
+	#mainpage {
+	    width:700px;
+	    height:470px;
+	
+	    position:absolute;
+	    top:25%;
+	    left:50%;
+	    margin-left: -350px;
+	    margin-top: -200px;
+	
+	    border: 4px;
+	
+	    border-radius:5px;
+
+	    text-align: center;
+	}
 #btn_return{
+	
     font-size: 15px;
     font-family: "Times New Roman";
     color: black;
@@ -23,22 +45,36 @@
     margin-left: 500px;
     margin-top: -280px;
 }
+		#btn_submit{
+		    font-size: 20px;
+		    font-family: "Times New Roman";
+		    color: black;
+		    background: url("https://pngimage.net/wp-content/uploads/2018/06/yellow-bars-png.png");
+		    background-size: 335px 60px;
+		
+		    width: 330px;
+		    line-height: 55px;
+		    text-align: center;
+		
+		    border: 0;
+		}
  </style>
     </head>
 <body>
+<div id="mainpage">;
+<div id="div_btn_return"><input type="submit" id="btn_return" value="Return to Main Page"></div>
 <h1>Librarian Control Panel</h1>
 
 <p>Hello, {Admin}</p>
 
 <h2>new user:</h2>
 <form method="POST">
-		Account:
-    <div id="div_username"><input type="text" id="username" name="username" class="text_field" placeholder="Please enter username" required><br></div>
-	<br>
-	Password:
-    <div id="div_password"><input type="password" id="password" name="password" class="text_field" placeholder="Please enter password" required><br></div>
+		
+    Account:<div id="div_username"><input type="text" id="username" name="username" class="text_field" placeholder="Please enter username" required><br></div>
 
-    <div id="div_btn_login"><input type="submit" id="btn_login" formaction="/login" value="Login"></div>
+    Password:<div id="div_password"><input type="password" id="password" name="password" class="text_field" placeholder="Please enter password" required><br></div>
+	<br>
+    <div id="div_btn_submit"><input type="submit" id = "btn_submit" value="Login"></div>
 </form>
 
 
@@ -46,18 +82,26 @@
 <h2>Remove User ID:</h2>
 
 <form method="POST">
-	Account:
-    <div id="div_username"><input type="text" id="username" name="username" class="text_field" placeholder="Please enter username" required><br></div>
-	<br>
-	Password:
-    <div id="div_password"><input type="password" id="password" name="password" class="text_field" placeholder="Please enter password" required><br></div>
+	
+    Account:<div id="div_username"><input type="text" id="username" name="username" class="text_field" placeholder="Please enter username" required><br></div>
 
-    <div id="div_btn_login"><input type="submit" id="btn_login" formaction="/login" value="Remove"></div>
+    Password:<div id="div_password"><input type="password" id="password" name="password" class="text_field" placeholder="Please enter password" required><br></div>
+<br>
+    <div id="div_btn_submit"><input type="submit" id = "btn_submit" value="Remove"></div>
+</form>
+<h2>The other options:</h2>
+<br>
+<form method="GET" action="/admin">
+    <div id="div_btn_submit"><input type="submit" id = "btn_submit" value="librarian control panel">
+</form>
+<br>
+<form method="GET" action="/showbooks">
+    <div id="div_btn_submit"><input type="submit" id = "btn_submit" value="list available books"></div>
 </form>
 
 	
 <form method="GET" action="/">
-    <div id="div_btn_return"><input type="submit" id="btn_return" value="Return to Main Page"></div>
+
 </form>
 </body>
 </html>
