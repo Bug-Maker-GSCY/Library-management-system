@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Add Book</title>
+		<style>
+			body {
+			    background: url("https://images.pexels.com/photos/196646/pexels-photo-196646.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260") no-repeat;
+			    background-size: 1920px 1080px;
+			
+			}
+			#mainpage {
+			    width:700px;
+			    height:470px;
+			
+			    position:absolute;
+			    top:25%;
+			    left:50%;
+			    margin-left: -350px;
+			    margin-top: -200px;
+			
+			    border: 4px;
+			
+			    border-radius:5px;
+		
+			    text-align: center;
+			}
+		#btn_return{
+			
+		    font-size: 15px;
+		    font-family: "Times New Roman";
+		    color: black;
+		    background: url("https://pngimage.net/wp-content/uploads/2018/06/yellow-bars-png.png");
+		    background-size: 200px 42px;
+		
+		    width: 200px;
+		    line-height: 40px;
+		    text-align: center;
+		
+		    border: 0;
+		
+		    position:absolute;
+		    top:50%;
+		    left:50%;
+		    margin-left: 500px;
+		    margin-top: -280px;
+			}
+			
+		#btn_submit{
+		    font-size: 20px;
+		    font-family: "Times New Roman";
+		    color: black;
+		    background: url("https://pngimage.net/wp-content/uploads/2018/06/yellow-bars-png.png");
+		    background-size: 335px 60px;
+		
+		    width: 330px;
+		    line-height: 55px;
+		    text-align: center;
+		
+		    border: 0;
+		}
+		 </style>
+		    </head>
+		<body>
+		<div id="mainpage">;
+		<div id="div_btn_return"><input type="submit" id="btn_return" value="Return to Main Page"></div>
+		<h1>Hold Book or Remove Book</h1>
+		
+		<p>Hello, {Admin}</p>
+		
+		<h2>Book information:</h2>
+		<h3>Hold Book:</h3>
+		<form method="POST">
+				
+		   Book name:<div><input type="text" id="name" name="" class="text_field" placeholder="Please enter Book name" required><br></div>
+			
+		   ISBN:<div><input type="number" id="ISBN" name="ISBN" class="text_field" placeholder="Please enter ISBN" required><br></div>
+		   
+		   Author:<div><input type = "text" id = "author" name ="" class = "text_field" placeholder= "Please enter Author" required=><br></div>
+		   Book location:<div><input type = "text" name ="" class = "text_field" placeholder="Please enter location" required><br></div>
+		   <br>
+		   <div id="div_btn_submit"><input type="submit" id = "btn_submit" value="Hold"></div>
+		</form>
+		<br>
+		<h3>Remove Book:</h3>
+		<form method="POST">
+				
+		   Book name:<div><input type="text" id="name" name="" class="text_field" placeholder="Please enter Book name" required><br></div>
+			
+		   ISBN:<div><input type="number" id="ISBN" name="ISBN" class="text_field" placeholder="Please enter ISBN" required><br></div>
+		   
+		   Author:<div><input type = "text" id = "author" name ="" class = "text_field" placeholder= "Please enter Author" required=><br></div>
+		   Book location:<div><input type = "text" name ="" class = "text_field" placeholder="Please enter location" required><br></div>
+		   <br>
+		   <div id="div_btn_submit"><input type="submit" id = "btn_submit" value="Remove"></div>
+		</form>
+	</head>
+	<body>
+	</body>
+</html>
