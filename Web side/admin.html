@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+     <head>
+    <meta charset="UTF-8">
+<title>Librarian Control Panel</title>
+<style>
+#btn_return{
+    font-size: 15px;
+    font-family: "Times New Roman";
+    color: black;
+    background: url("https://pngimage.net/wp-content/uploads/2018/06/yellow-bars-png.png");
+    background-size: 200px 42px;
+
+    width: 200px;
+    line-height: 40px;
+    text-align: center;
+
+    border: 0;
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left: 500px;
+    margin-top: -280px;
+}
+ </style>
+    </head>
+<body>
+<h1>Librarian Control Panel</h1>
+
+<p>Hello, {Admin}</p>
+
+<h2>new user:</h2>
+<form method="POST">
+		Account:
+    <div id="div_username"><input type="text" id="username" name="username" class="text_field" placeholder="Please enter username" required><br></div>
+	<br>
+	Password:
+    <div id="div_password"><input type="password" id="password" name="password" class="text_field" placeholder="Please enter password" required><br></div>
+
+    <div id="div_btn_login"><input type="submit" id="btn_login" formaction="/login" value="Login"></div>
+</form>
+
+
+
+<h2>Remove User ID:</h2>
+
+<form method="POST">
+	Account:
+    <div id="div_username"><input type="text" id="username" name="username" class="text_field" placeholder="Please enter username" required><br></div>
+	<br>
+	Password:
+    <div id="div_password"><input type="password" id="password" name="password" class="text_field" placeholder="Please enter password" required><br></div>
+
+    <div id="div_btn_login"><input type="submit" id="btn_login" formaction="/login" value="Remove"></div>
+</form>
+
+	
+<form method="GET" action="/">
+    <div id="div_btn_return"><input type="submit" id="btn_return" value="Return to Main Page"></div>
+</form>
+</body>
+</html>
