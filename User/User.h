@@ -11,7 +11,7 @@ private:
   string password;
 public:
 	User(string account, string pass){
-    userID = account;
-    password = pass;
-  }
+    		userID = account;
+    		password = pass;
+  	}
 };
