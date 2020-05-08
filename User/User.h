@@ -1,17 +1,29 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "User.h"
+#include <vector>
+
 //Coded by: Molly Morris
 using namespace std;
 class User
 {
-private:
-  string userID;
-  string password;
+protected:
+    string userID;
+    string password;
 public:
-	User(string account, string pass){
-    		userID = account;
-    		password = pass;
-  	}
+    //default constructor
+    User() {
+        userID = "";
+        password = "";
+    }
+    //constructor to set the username and password
+    User(string account, string pass) {
+        userID = account;
+        password = pass;
+    }
+    //getter for username
+    string getUserID(){
+        return userID;
+    }
+    
 };
